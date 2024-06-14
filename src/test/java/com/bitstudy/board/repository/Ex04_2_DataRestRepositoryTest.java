@@ -76,6 +76,5 @@ public class Ex04_2_DataRestRepositoryTest {
         mockMvc.perform(get("/api/articles/1/articleComment/99"))
                 .andExpect(status().isOk()) // 현재 상태가 200인가 (존재하냐? 라고 물어보는거)
                 .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
-
     }
 }
