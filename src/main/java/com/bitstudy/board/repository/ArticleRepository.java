@@ -2,7 +2,9 @@ package com.bitstudy.board.repository;
 
 import com.bitstudy.board.domain.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+@RepositoryRestResource
 // TDD 할때 사용할 임시 파일임 (이거 이용해서 DB 접근할거임)
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 }

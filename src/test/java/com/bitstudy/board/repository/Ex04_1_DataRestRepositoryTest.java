@@ -39,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest // 슬라이스 테스트. 컨트롤러 관련된 Bean들만 로드함
             // 이 어노테이션은 컨트롤러와 연관된 내용만 최소한으로 로드하기때문에 data rest의 autoConfigration을 읽지 않는다.
-public class Ex4_1_DataRestRepositoryTest {
+public class Ex04_1_DataRestRepositoryTest {
     /* MockMvc 테스트 방법
         1) MockMvc 생성(빈 준비)
         2) MockMvc에 요청에 대한 정보를 입력함
@@ -54,7 +54,7 @@ public class Ex4_1_DataRestRepositoryTest {
 
     private final MockMvc mockMvc;
 
-    public Ex4_1_DataRestRepositoryTest(@Autowired MockMvc mockMvc) {
+    public Ex04_1_DataRestRepositoryTest(@Autowired MockMvc mockMvc) {
         this.mockMvc = mockMvc;
     }
 
