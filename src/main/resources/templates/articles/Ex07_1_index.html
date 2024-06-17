@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!-- 해설: xmlns: https://www.thymeleaf.org/
+    이거 넣으면 타임리프 템플렛?이다
+-->
 
 <head>
     <meta charset="UTF-8">
     <title>게시판 페이지</title>
 </head>
 <body>
+<!-- 타임리프는 templates 폴더 안에 넣어야 함
+        (templates가 루트 폴더임)
+        파일은 templates 에
+        이미지, css 들은 resources > static > img, css 폴더 생성
 
-<!-- 이 파일 완성하고 컨트롤러 가서 매핑 연결하면 테스트 돌릴 수 있음
-    html 코드 바꿀 때 마다 리컴파일 해야함 (Ctrl + Shift + f9) 혹시 안 되면 Ctrl + s 하고 해보기
-    같이 쓰면 편한 웹스토어 앱 - liveReload (vsCode에서 live server 같은거) -->
+        구글에서 thymeleaf html 검색하고 > 아래쯤에 타임리프 공식 홈페이지 'tutorials: Usinf Thymeleaf' 있음
+        그거 들어가서 '3 Using Texts' 보면 기본 템플릿코드 있음
 
+        할일: header와 footer를 다른 파일로 들어내고 th(타임리프) 로 끌어오기
+-->
+
+<!-- header.html로 이동
 <header>header 삽입부</header>
+    <header>를 컴포넌트 방식으로 바꿔볼거임
+
+    사용법: <태그명 th:replace="~{가져올 컴포넌트 파일명 :: selector}"></태그명>
+
+    <header>header 삽입부</header> =>
+-->
+    <header th:replace="~{Ex07_2_header :: #header}"></header>
 
 <main>
     <!-- 검색파트 -->
@@ -80,9 +97,12 @@
 
 </main>
 
-<footer>
-    <hr>
-    footer 삽입부
-</footer>
+<footer th:replace="~{Ex07_3_footer :: #footer}"></footer>
+<!--<footer>-->
+<!--    <hr>-->
+<!--    footer 삽입부-->
+<!--</footer>-->
+
+
 </body>
 </html>
