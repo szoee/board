@@ -52,7 +52,7 @@ public interface ArticleRepository extends
         bindings.including(root.title, root.content, root.hashtag, root.createdAt, root.createdBy);
 //        bindings.bind(root.title).first(StringExpression::likeIgnoreCase); // 쿼리상 "like '${문자열}'" 로 들어감
 
-        bindings.bind(root.title).first(StringExpression::containsIgnoreCase); // "like '%문자열$'
+        bindings.bind(root.title).first(StringExpression::containsIgnoreCase); // "like '%문자열%'
         bindings.bind(root.content).first(StringExpression::containsIgnoreCase);
         bindings.bind(root.hashtag).first(StringExpression::containsIgnoreCase);
         bindings.bind(root.createdAt).first(DateTimeExpression::eq); // 날짜니까 DateTimeExpression 사용. eq는 equals 뜻
