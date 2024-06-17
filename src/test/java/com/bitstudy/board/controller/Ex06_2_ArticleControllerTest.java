@@ -62,7 +62,7 @@ class Ex06_2_ArticleControllerTest {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/detail"))
                 .andExpect(model().attributeExists("articles"))
-                .andExpect(model().attributeExists("articlesComments")); // 상세페이지에는 댓글들도 여러개 있을수 있으니 모델에 articlesComments 도 키값으로 있을거임
+                .andExpect(model().attributeExists("articleComments")); // 상세페이지에는 댓글들도 여러개 있을수 있으니 모델에 articlesComments 도 키값으로 있을거임
     }
 
 
